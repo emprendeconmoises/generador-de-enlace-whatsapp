@@ -1,0 +1,39 @@
+#form {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #form label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  #form input {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+  
+  #form button {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    background-color: #4caf50;
+    color: rgb(254, 239, 19);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #linkContainer a {
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em;
+    background-color: #4caf50;
+    color: rgb(243, 235, 11);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+  }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYSUP</title>
+</head>
+<body>
+    <form id="form">
+        <label for="phone">Número de teléfono:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <label for="message">Mensaje:</label><br>
+        <input type="text" id="message" name="message"><br><br>
+        <button type="submit">Generar enlace</button>
+      </form> 
+      <div id="linkContainer"></div>
+      <script> document.getElementById("form").addEventListener("submit", generateLink);
+
+        function generateLink(event) {
+          // Evita que el formulario se envíe y recargue la página
+          event.preventDefault();
+        
+          // Obtiene los valores del formulario
+          const phone = document.getElementById("phone").value;
+          const message = document.getElementById("message").value;
+        
+          // Genera el enlace de WhatsApp
+          const whatsAppLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        
+          // Muestra el enlace en pantalla
+          const linkContainer = document.getElementById("linkContainer");
+          linkContainer.innerHTML = `<a href="${whatsAppLink}" target="_blank">${whatsAppLink}</a>`;
+        }
+         </script>
+</body>
+</html>
